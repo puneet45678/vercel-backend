@@ -5,7 +5,8 @@ const proxy =  httpProxy.createProxyServer();
 const app = express()
 const PORT = 8000
 
-const BASE_PATH = "https://vercelpuneetg.s3.ap-south-1.amazonaws.com/__outputs"
+// https://vercelpuneetg.s3.ap-south-1.amazonaws.com/__outputs
+const BASE_PATH = ""
 app.use((req,res)=>{
     const hostname= req.hostname;
     const subdomain = hostname.split('.')[0];

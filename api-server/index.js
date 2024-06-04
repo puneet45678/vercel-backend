@@ -5,7 +5,6 @@ const {Server} = require('socket.io')
 const redis = require('redis');
 const { Redis } = require('ioredis');
 
-// rediss://default:AVNS_nckLPLfAuU-_QqOs9Wa@caching-278746ea-puneetgrover4031-faa6.f.aivencloud.com:15707
 const app = express()
 const PORT = 9000
 
@@ -25,7 +24,7 @@ io.on('connection',socket=>{
 io.listen(9002, () => console.log('Socket Server 9002'))
 
 const ecsClient = new ECSClient({
-    region :'ap-south-1',
+    region :'',
     credentials:{
         accessKeyId :'',
         secretAccessKey:''
@@ -95,7 +94,7 @@ app.get('/check-status/:taskArn', async (req, res) => {
 
 async function checkTaskStatus(taskArn) {
     const command = new DescribeTasksCommand({
-        cluster: "arn:aws:ecs:ap-south-1:891376947057:cluster/builder-cluster",
+        cluster: "",
         tasks: [taskArn]
     });
 
