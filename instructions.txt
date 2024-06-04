@@ -1,0 +1,9 @@
+aws cli and docker should be installed
+
+npm install in each folder 
+
+then create a ecr repo and push the image build -server folder
+
+ubuntu:focal can cause an error install it manually on laptop
+
+craete a cluster , task definition 
