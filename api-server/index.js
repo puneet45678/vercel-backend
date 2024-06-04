@@ -10,7 +10,7 @@ const PORT = 9000
 
 app.use(express.json())
 
-// create a new one using AnimationEvent.io
+// create a new one using aiven.io
 const subscriber = new Redis('')
 
 const io = new Server({cors:'*'})
